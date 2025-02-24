@@ -1,0 +1,20 @@
+edition: 1.0.0
+name: my-framework-app
+access: default
+services:
+  framework:
+    component: fc
+    props:
+      region: cn-hangzhou
+      service:
+        name: serverless-devs-application
+      function:
+        name: GPT-SoVITS-msi4
+        description: Initialize
+        runtime: python3.9
+        handler: webui.py
+        memorySize: 8192
+        cpu: 2
+        timeout: 60
+        codeUri: ./
+        diskSize: 10240
